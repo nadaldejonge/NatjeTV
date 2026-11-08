@@ -1,0 +1,45 @@
+# Bronnen en licenties
+
+Gecontroleerd op 8 november 2026 via GitHub REST en raw-bestanden op vaste commits. Ruwe snapshots staan in `research/<owner>__<repo>/`, inclusief `audit.json`, `tree.json`, rootlicenties/README/build en geselecteerde relevante bronbestanden. Dit is brononderzoek, geen benchmark of hardwarevalidatie van deze projecten.
+
+| Bron | Exacte HEAD / commitdatum | Licentie | Bestanden en keuze |
+|---|---|---|---|
+| [nadaldejonge/NatjeTube](https://github.com/nadaldejonge/NatjeTube/tree/607a15a4256a7a0a911fc230195199e53d13ff22) | `607a15a4256a7a0a911fc230195199e53d13ff22` / 2026-11-06T23:49:01Z | MIT | NightModeManager/OverlayView/Data, settingsactivity, build.gradle. Parameters/profielen; geen player/streamingcode. 0.60 amber, #FFAB50, dim max 80%, 5 s. |
+| [nadaldejonge/NatjeTube-SharedModules](https://github.com/nadaldejonge/NatjeTube-SharedModules/tree/c6b6e2a90fac2598fe390ede74203772d9e3e3ae) | `c6b6e2a90fac2598fe390ede74203772d9e3e3ae` / 2026-11-03T17:56:43Z | NIET VASTGESTELD | build.gradle, repositoryboom, README. Geen module nodig. Geen door GitHub gedetecteerde rootlicentie; geen broncode overgenomen. |
+| [nadaldejonge/NatjeTube-MediaServiceCore](https://github.com/nadaldejonge/NatjeTube-MediaServiceCore/tree/0215eae69d7f82e002f71babd3c5c0063de5a82d) | `0215eae69d7f82e002f71babd3c5c0063de5a82d` / 2026-11-03T18:12:18Z | NIET VASTGESTELD | build.gradle, repositoryboom, README. Geen mediaservice in launcher. Geen door GitHub gedetecteerde rootlicentie; geen code overgenomen. |
+| [pengchujin/aerial-tv](https://github.com/pengchujin/aerial-tv/tree/09822013806fa4b00a59179e033a603ca52522ae) | `09822013806fa4b00a59179e033a603ca52522ae` / 2026-11-08T07:54:34Z | MIT | README.en.md, app/build.gradle.kts, tools/install.sh, MainActivity. 1.88, Compose, min21/target34/compile36; HOME/guardflavors. Installscript gelezen, NOOIT uitgevoerd. Home Guard/secure-settings/herstelbindings niet overgenomen. |
+| [kierandrewett/vista](https://github.com/kierandrewett/vista/tree/d514d934573ddf31e07b8a1ed90ee6b22e1a04ca) | `d514d934573ddf31e07b8a1ed90ee6b22e1a04ca` / 2026-06-01T00:50:34Z | MIT | AppRepository.kt, MainActivity.kt, manifest, libs.versions.toml. 0.1.0, Compose TV, min28/target34/compile34. TV-first plus LAUNCHER discovery als architectuurreferentie; eigen begrensde implementatie. |
+| [mcssc25/LumaLauncher](https://github.com/mcssc25/LumaLauncher/tree/c84fbcd1c0150d5254fb22e89d4a58c1af791ebc) | `c84fbcd1c0150d5254fb22e89d4a58c1af791ebc` / 2026-07-18T15:52:47Z | NIET VASTGESTELD | AppRepository.kt, HomeAccessibilityService, app/build.gradle.kts. 0.4.1, Compose, min23/target36/compile36. Geen rootlicentie gevonden in onderzochte boom: geen broncode overnemen. Iconpack/focus als vergelijkingspunt. |
+| [AazainKhan/glass-tv-launcher](https://github.com/AazainKhan/glass-tv-launcher/tree/69653ca7517517254e1db7dfc75acf27ebeddfa6) | `69653ca7517517254e1db7dfc75acf27ebeddfa6` / 2026-10-29T15:08:10Z | Apache-2.0 | AppRepository.kt, MainActivity.kt, manifest, app/build.gradle.kts. 0.3.0, Compose, min28/target36/compile37. Flow/LauncherApps en cache-invalidatie onderzocht; relatief grote effect-/controlcenterarchitectuur niet geïmporteerd. |
+| [B0redDev/glass-launcher](https://github.com/B0redDev/glass-launcher/tree/c86e3774900716ad1c473232974edeefc0d5165c) | `c86e3774900716ad1c473232974edeefc0d5165c` / 2026-10-23T22:28:53Z | MIT | MainActivity.java, manifest, app/build.gradle. 1.6, framework Views, min26/target34/compile34, geen runtime-dependencies. Beste lichte UI-basis als architectuurprincipe; eigen Kotlin Views plus RecyclerView, geen continue-watching shelf. |
+| [leanbitlab-org/LtvLauncher](https://github.com/leanbitlab-org/LtvLauncher/tree/64609c0c42385945cc84fe23aafbed581ae4ad6c) | `64609c0c42385945cc84fe23aafbed581ae4ad6c` / 2026-11-08T04:26:35Z | GPL-3.0 | README, LICENSE, android/app/build.gradle, LauncherActivity. Flutter/FLauncher-afgeleide, GPL-3.0. Alleen vergelijken van navigatie/widgets/inputs; geen code of assets overgenomen. |
+| [MadeinTaly/midnightbeam](https://github.com/MadeinTaly/midnightbeam/tree/65146ac657634b495d7cec72b40ae3c7ae0c9d40) | `65146ac657634b495d7cec72b40ae3c7ae0c9d40` / 2026-11-03T17:50:51Z | MIT | DimService.java, DimAccessibilityService.java, ScheduleMath.java, build.sh. 1.12.0 volgens commitbericht; directe Java/platformbuild. Gewone/accessibility-window en persistent-servicepatroon bestudeerd. Eigen kleine implementatie zonder ADB/root/server/audio/netwerk. |
+| [ismael6499/omnitv](https://github.com/ismael6499/omnitv/tree/485f6f0afd3d26726a7d44a7ab16a18e87640bd1) | `485f6f0afd3d26726a7d44a7ab16a18e87640bd1` / 2026-10-18T07:23:27Z | MIT | QuickMenuOverlay.java, AiSummaryOverlay.java, manifest, app/build.gradle. TYPE_ACCESSIBILITY_OVERLAY + niet-focusbare overlayflags onderzocht. Geen quickmenu/AI/vertaling/keyinjection overgenomen; uitsluitend ontwerpkennis voor optionele filterbackend. |
+| [eslavnov/pylips](https://github.com/eslavnov/pylips/tree/b6af4cc14d7e17e361f16703991b902d43d199c9) | `b6af4cc14d7e17e361f16703991b902d43d199c9` / 2026-05-04T17:46:26Z | MIT | README, LICENSE, repositoryboom. Philips-netwerk-API-onderzoeksreferentie. Geen verbinding, dependency of code-overname. Titan OS-compatibiliteit niet bewezen. |
+
+## Afweging technische basis
+
+| Aspect | Aerial | Vista | Luma | Glass TV | Glass (B0red) | Ltv | Natje TV-keuze |
+|---|---|---|---|---|---|---|---|
+| API 34 | target34 | target34 | target36 | target36 | Flutter Android-host | target34 | target34, compile36, min26 |
+| Remotefocus | Compose, uitgebreid | Compose TV | Compose | Compose | native Views | Flutter | native focus + 120ms schaal |
+| 2GB RAM/starttijd | veel features | Compose/dependencies | Compose/dependencies | blur/controlcenter | weinig runtimeonderdelen | Flutter-engine | Views + lazy RecyclerView + begrensde bitmapcache |
+| Onderhoudbaarheid | brede deviceworkarounds | compactere apprepository | geen bewezen licentie | effectrijke codebasis | eenvoudig frameworkmodel | GPL + ander platform | één eigen Kotlin-app, kleine platformservice |
+| HOME/herstel | standard + guard; gevoeligere grants | native HOME | home reliability service | HOME + systeemspecifieke logica | native HOME | Android-host | native HOME; snapshot en expliciet herstel, geen guard |
+| Toekomstige overlay | meerdere services | los toe te voegen | accessibility hook | veel overlayconcepten | los toe te voegen | platformbrug nodig | onafhankelijke foreground/accessibility-backends |
+
+RAM en startlatentie zijn structurele inschattingen uit source/dependencies, **geen gemeten vergelijkende waarden**. Geen van de externe kandidaten is hier gebouwd of op de Xiaomi getest. API-compatibiliteit is afgeleid van manifests/buildbestanden, niet gegarandeerd op specifieke firmware.
+
+Gekozen is de framework-Views-aanpak van B0redDev als lichte architectuurbasis, met PackageManager-principes uit Vista, Night Mode-parameters uit NatjeTube en overlay/servicepatronen uit MidnightBeam/OmniTV. De briefing staat expliciet toe principes over te nemen als samenvoegen van codebases complexiteit verhoogt. Daarom geen fork met niet-benodigde feeds/blur/netwerk/guards en geen Compose-runtime; de standaard Android-focus en RecyclerView leveren de benodigde lazy navigatie. Geen letterlijke launcherbroncode overgenomen. De GPL-bron en onduidelijk gelicentieerde projecten zijn niet in productiecode verwerkt.
+
+## Distributie en credits
+
+Eigen projectcode: MIT, zie LICENSE. Door de gebruiker geleverde Natje TV-/IPTV-branding valt niet automatisch onder die codelicentie. Originele primaire branding komt uitsluitend uit het startpakket; IPTV-logo uit de lokale Player-brandingmap. Er zijn geen commerciële appiconen opnieuw getekend; geïnstalleerde banners/iconen komen via PackageManager.
+
+Referentiecredits met ongewijzigde licentietekst in `app/src/main/assets/licenses/`: NatjeTube (NatjeNN/upstream zoals LICENSE vermeldt), Vista, B0redDev Glass, MidnightBeam en OmniTV, ieder MIT. De actuele bron kan eigen aanvullende dependencylicenties hebben; hun dependencies zijn niet overgenomen.
+
+Productie-dependencies: Kotlin stdlib 2.2.10 (Apache-2.0), AndroidX RecyclerView 1.4.0 en transitieve AndroidX/JetBrains-libraries (Apache-2.0; zie `logs/runtime-dependencies.log` en `docs/DEPENDENCIES.json`). Volledige Apache-2.0 en library-NOTICE-teksten zijn meegeleverd. Gradle wrapper: Apache-2.0. JUnit 4.13.2 (EPL-1.0) en Robolectric 4.16.1 (MIT) zijn uitsluitend testdependencies, niet verpakt in de APK. Geen gedownload font; Android-systeemfont. Bronassets vermelden Inter Display-woordbeeldcontouren, geen fontbinary gebundeld.
+
+## NatjeTube-patchtrace
+
+Patch `a061876e2c8167a4873422754ab448a2a1fa65ea` heet “Fix Night Mode sidebar selection and extend the warmth range”. De API-diff is opgeslagen als `research/nadaldejonge__NatjeTube/night_menu_patch.json`. HEAD/tag v2.0.1 `607a15a4256a7a0a911fc230195199e53d13ff22` bevat die patch plus test-/documentatiecommits. Natje TV hergebruikt het echte renderbereik van de patch; een verouderde 0.06-previewfactor in upstream-instellingen is niet als leidend overgenomen.

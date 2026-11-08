@@ -1,0 +1,13 @@
+.gradle/
+**/build/
+local.properties
+*.jks
+*.keystore
+.idea/
+artifacts/
+research/
+logs/
+hdmi_private.json
+natjetv_hdmi_private.json
+*.p12
+*.pem

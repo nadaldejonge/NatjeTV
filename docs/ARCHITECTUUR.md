@@ -1,0 +1,21 @@
+# Architectuur en technische keuzes
+
+Eigen Kotlin-app, één APK zonder native ABI-afhankelijkheid. Native Android Views met een verticale RecyclerView en vier kolommen; de favorietenrij scrollt horizontaal. De zware continu draaiende grafische effecten van de onderzochte launchers zijn niet nodig voor dit ontwerp. TV-focus gebruikt native focus, schaal 1.055, duur 120 ms. Appnamen verschijnen bij focus. Inactieve ontbrekende favorieten tonen een status, nooit een fictief startbare app.
+
+`discovery/AppDiscovery`: TV-launcherentries eerst, daarna sideloaded LAUNCHER-apps, deduplicatie per pakket, eigen app uitgesloten. Manifestqueries geven begrensde package visibility zonder QUERY_ALL_PACKAGES. PackageManager hercontroleert launch intents bij starten. Koppelingen via UI overstemmen automatische naam-/pakketdetectie. `launcher/MainActivity` ontvangt pakketwijzigingen en haalt inventaris op buiten de UI-thread.
+
+`settings/Configuration`: immutable model, versioned JSON in één atomair SharedPreferences-record. Commit op expliciete wijzigingen; schema/grootte/ranges gecontroleerd. Geen credentials. Profielkeuze/CRUD, volgorde, categorie, verborgen apps, favorieten, thema, documentpicker-URI's, schema en nachtstand persistent. JSON-export laat apparaatgebonden afbeelding-URI's weg; import activeert nooit services.
+
+`nightmode/NightEngine`: twee expliciet door gebruiker te kiezen backends met dezelfde renderer en instellingen. `TYPE_APPLICATION_OVERLAY` draait vanuit `NightService`, foreground type `specialUse`, melding en uitknop. `TYPE_ACCESSIBILITY_OVERLAY` draait vanuit optioneel door gebruiker ingeschakelde toegankelijkheidsservice. Slechts één filterbackend tegelijk. Geen schermnodes, screenshots, accounts, key injection of manipulatie van DRM. Warmte wordt eerst getekend, dan zwart dimmen; geen fysieke backlightcontrole. Het lokale NatjeTube-UI-voorbeeld bevat nog een oude 0.06-previewfactor; leidend is de echte player-renderer met 0.60, getest in deze app.
+
+Het schema wordt bij wijziging/start, tijd-/tijdzonebroadcast en iedere 30 seconden herberekend uit lokale tijd. Grenzen hebben daardoor bij een slapende scheduler maximaal ongeveer 30 seconden normale vertraging, plus eventuele Android-procesbeperking. Geen exacte alarmrechten of continue frames buiten de vijfsecondenovergang. START_STICKY en BOOT_COMPLETED vragen herstel; Android/Xiaomi kan dat blokkeren. Heropenen toont de echte toestemmings-/servicestatus. Force-stop kan niet legitiem worden omzeild.
+
+Gewone overlay heeft vensteralpha 1 en pixelalpha volgens NatjeTube, zodat het echte warmtebereik behouden blijft. Android 12+ kan bij hoge onbetrouwbare overlay-opacity touchscreen-doorgifte beperken. De TV-D-pad blijft bij de onderliggende app doordat het venster niet focusbaar is; daadwerkelijke toetsen en DRM-compositie worden in fase 2 getest. De app claimt geen succesvolle detectie van een door andere apps verborgen overlay.
+
+`remote/` is logisch ondergebracht als `nightmode/RemoteChord`: observeert ontvangen toetscodes, gebruikt Menu+omhoog/omlaag naar gebruikerskeuze, en een timed noodhold Terug+omlaag. Consumeert geen Home/Back. Alleen toetscodes worden lokaal bewaard voor de diagnostische status; geen getypte tekst.
+
+`ui/Images`: één decode-executor, 12 MiB LRU voor begrensde bitmaps, geen netwerkafbeeldingen. Meegeleverde originele 4K-wallpapers worden op 1920×1080 RGB565 gedecodeerd; customfoto's via bounds/sample en center crop. Tegelartwork maximaal 480×270. RecyclerView recycleert de alle-appstegels. Geen gemeten Xiaomi-RAM-/starttijdbeloftes: die metingen staan in fase 2.
+
+`installation/HdmiProvider`: duidelijke niet-beschikbare provider. Geen netwerk-API of CEC-privileges gebruikt. `scripts/` bevat veilige fasegrens, expliciete serial, recoverybaseline vóór mutatie en geen automatische stock-launcheruitschakeling.
+
+Primaire Android-referenties: [overlay window flags](https://developer.android.com/reference/android/view/WindowManager.LayoutParams), [foreground service specialUse](https://developer.android.com/develop/background-work/services/fgs/service-types#special-use), [package visibility](https://developer.android.com/training/package-visibility/declaring).

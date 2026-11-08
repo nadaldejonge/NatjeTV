@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><defs>
+    <linearGradient id="silver" x1="0" y1="0" x2=".2" y2="1" objectBoundingBox="true"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".43" stop-color="#F8FAFC"/><stop offset=".7" stop-color="#D8DCE3"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+    <linearGradient id="silverStroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".4" stop-color="#DBDFE7"/><stop offset=".75" stop-color="#F8F9FB"/><stop offset="1" stop-color="#AEB3BC"/></linearGradient>
+    <linearGradient id="charcoal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#32343B"/><stop offset=".28" stop-color="#141519"/><stop offset=".7" stop-color="#07080B"/><stop offset="1" stop-color="#202126"/></linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17191E"/><stop offset=".38" stop-color="#0C0D10"/><stop offset="1" stop-color="#06070A"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#777D88" stop-opacity="0"/><stop offset=".35" stop-color="#F8F9FB" stop-opacity=".75"/><stop offset=".70" stop-color="#FFFFFF" stop-opacity=".5"/><stop offset="1" stop-color="#777D88" stop-opacity="0"/></linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="softshadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="12"/></filter>
+    </defs><g transform="translate(0,0) scale(3.25)">
+    <path d="M69 207 C55 203 52 191 52 173 L52 132 C52 93 76 77 111 77 L200 77 C236 77 255 95 255 130 L255 188" fill="none" stroke="#17181C" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M134 77 L105 37 M173 77 L202 37" fill="none" stroke="#17181C" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="105" cy="37" r="9" fill="#17181C"/><circle cx="202" cy="37" r="9" fill="#17181C"/>
+    <path d="M135 118 C135 112 143 110 150 114 L206 147 C213 151 213 159 206 163 L150 196 C142 201 135 196 135 188 Z" fill="#17181C"/>
+    <path d="M25 245 C71 212 147 202 280 206 C201 211 124 221 49 240 Z" fill="#17181C"/>
+    <path d="M52 246 C114 215 199 219 277 207" fill="none" stroke="#17181C" stroke-width="1.5" stroke-opacity=".55"/>
+    </g></svg>

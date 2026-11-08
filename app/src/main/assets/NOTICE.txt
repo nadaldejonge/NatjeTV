@@ -1,0 +1,7 @@
+Natje TV 1.0
+Eigen launcher- en servicecode.
+NatjeTube Night Mode parameters: NatjeNN / nadaldejonge, MIT.
+AndroidX RecyclerView en transitieve AndroidX libraries: Apache-2.0.
+Kotlin standaardbibliotheek: Apache-2.0.
+Volledige licenties: assets/licenses/ en docs/BRONNEN_EN_LICENTIES.md.
+Branding: door gebruiker aangeleverde Natje TV en Natje IPTV assets.

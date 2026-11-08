@@ -1,0 +1,11 @@
+<resources>
+    <style name="AppThemeBase" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#D8DCE3</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">#07080B</item>
+    </style>
+    <style name="AppTheme" parent="AppThemeBase" />
+    <string name="accessibility_description">HOME-hulp opent Natje TV wanneer Google TV het startscherm overneemt. Bevat ook een optionele schermfilter en afstandsbedieningscombinatie. Leest geen scherminhoud. Beveiligde video moet apart worden getest. Noodstop voor het filter: houd Terug + omlaag 3 seconden vast; Terug blijft normaal werken. Schakel deze service uit om HOME-hulp te stoppen.</string>
+</resources>

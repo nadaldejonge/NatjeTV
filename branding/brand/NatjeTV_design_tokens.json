@@ -1,0 +1,24 @@
+{
+  "palette": {
+    "Black": "#000000",
+    "Near Black": "#07080B",
+    "Dark Charcoal": "#141519",
+    "Charcoal": "#23252A",
+    "Warm Gray": "#8A8E95",
+    "Silver": "#D8DCE3",
+    "White": "#FFFFFF",
+    "Focus Glow": "#F4F6FA"
+  },
+  "cornerRadiusDp": {
+    "tile": 22,
+    "surface": 18,
+    "dialog": 24
+  },
+  "tileAspectRatio": 1.7777777777777777,
+  "focusScale": 1.055,
+  "focusDurationMs": 120,
+  "transitionMs": 150,
+  "nightModeFadeMs": 5000,
+  "typography": "Inter/GoogleSans-like via system fonts; preserve readability",
+  "resourceGuidance": "Always use original SVG sources for any new size and never upscale small PNGs."
+}
